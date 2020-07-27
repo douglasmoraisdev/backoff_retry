@@ -1,0 +1,2 @@
+MAX_RETRY: 0 #0 for forever
+MAX_RETRY_TIME: 13
