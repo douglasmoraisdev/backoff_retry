@@ -21,7 +21,7 @@ class Retry:
             self.max_retries = 1
 
     def backoff_strategy(self):
-
+        
         if self.use_retry:
 
             if self.exception is None:
@@ -37,4 +37,4 @@ class Retry:
                                             max_tries=self.max_retry_time
                                         )        
         else:
-            return None
+            return lambda x:x
