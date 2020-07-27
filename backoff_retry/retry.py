@@ -28,7 +28,7 @@ class Retry:
                                     )
         else:
             return backoff.on_exception(backoff.fibo,
-                                        exception,
+                                        self.exception,
                                         max_value=self.max_retries,
                                         max_tries=self.max_retry_time
                                     )        
