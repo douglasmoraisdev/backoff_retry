@@ -27,14 +27,14 @@ class Retry:
             if self.exception is None:
                 return backoff.on_exception(backoff.fibo,
                                             Exception,
-                                            max_value=self.max_retries,
-                                            max_tries=self.max_retry_time
+                                            max_value=self.max_retry_time,
+                                            max_tries=self.max_retries
                                         )
             else:
                 return backoff.on_exception(backoff.fibo,
                                             self.exception,
-                                            max_value=self.max_retries,
-                                            max_tries=self.max_retry_time
+                                            max_value=self.max_retry_time,
+                                            max_tries=self.max_retries
                                         )        
         else:
             return lambda x:x
